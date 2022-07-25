@@ -4,10 +4,10 @@ from selene.support.shared.jquery_style import s, ss
 from demoqa_tests.resourse import resourse
 import allure
 
+
 @allure.title("Test success fill form")
-def test_name(browser_config):
-    with allure.step("Open form"):
-        browser.open('/automation-practice-form').driver.maximize_window()
+def test_name(setup_browser):
+    browser = setup_browser
 
     firstname = 'Anna'
     lastname = 'Hanna'
@@ -24,6 +24,9 @@ def test_name(browser_config):
     address = 'my room'
     state = 'NCR'
     city = 'Delhi'
+
+    with allure.step("Open form"):
+        browser.open("https://demoqa.com/automation-practice-form").driver.maximize_window()
 
     with allure.step("Fill form"):
         s('#firstName').type(firstname)
