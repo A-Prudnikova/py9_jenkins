@@ -26,7 +26,7 @@ def test_name(setup_browser):
     city = 'Delhi'
 
     with allure.step("Open form"):
-        browser.open("https://demoqa.com/automation-practice-form").driver.maximize_window()
+        browser.open("https://demoqa.com/automation-practice-form")
 
     with allure.step("Fill form"):
         s('#firstName').type(firstname)
