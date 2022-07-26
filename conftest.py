@@ -18,10 +18,6 @@ def pytest_addoption(parser):
     )
 
 
-@pytest.fixture(scope='session', autouse=True)
-def load_env():
-    load_dotenv()
-
 
 @pytest.fixture(scope='function')
 def setup_browser(request):
