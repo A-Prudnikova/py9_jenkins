@@ -1,4 +1,3 @@
-from selene.support.shared import browser
 from selene import have
 from selene.support.shared.jquery_style import s, ss
 from demoqa_tests.resourse import resourse
@@ -27,6 +26,8 @@ def test_name(setup_browser):
 
     with allure.step("Open form"):
         browser.open("https://demoqa.com/automation-practice-form")
+        browser.execute_script(script="document.querySelector('#app > footer').style.display='none'")
+        browser.execute_script(script="document.querySelector('#fixedban').style.display='none'")
 
     with allure.step("Fill form"):
         s('#firstName').type(firstname)
