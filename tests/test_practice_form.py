@@ -4,6 +4,22 @@ from demoqa_tests.resourse import resourse
 import allure
 
 
+def test_failing():
+    assert 3 > 5
+
+
+def test_failing2():
+    assert 3 > 7
+
+
+def test_passing():
+    assert 3 > 1
+
+
+def test_passing2():
+    assert 3 > 2
+
+
 @allure.title("Test success fill form")
 def test_name(setup_browser):
     browser = setup_browser
