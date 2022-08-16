@@ -4,12 +4,12 @@ from demoqa_tests.resourse import resourse
 import allure
 
 
-def test_failing():
+"""def test_failing():
     assert 3 > 5
 
 
 def test_failing2():
-    assert 3 > 7
+    assert 3 > 7"""
 
 
 def test_passing():
